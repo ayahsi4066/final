@@ -1,6 +1,6 @@
 version: '3'
 services:
-  drupal:
+  drupal:  
     image: bitnami/drupal:latest
     ports:
       - 8080:80
@@ -44,7 +44,7 @@ services:
     volumes:
       - letsencrypt_data:/etc/letsencrypt
       - certbot_data:/var/www/certbot
-    command: certonly --webroot --webroot-path=/var/www/certbot --email yahsi.abdullah@std.izu.edu.tr --agree-tos --no-eff-email --force-renewal -d halkalicocugu.me
+    command: certonly --webroot --webroot-path=/var/www/certbot --email yahsi.abdullah@std.izu.edu.tr --agree-tos --no-eff-email --force-renewal -d hakalicocugu.me
     depends_on:
       - nginx
     networks:
